@@ -146,6 +146,8 @@ Your task is to write a function that checks every item in the array for a strin
 that contain the received string. This would allow you to be able to filter for "Vanilla", "Sherbet", "Lemon" etc. when different holidays roll around 
 by passing in those specific strings.
 
+
+
 Use the filterByWord function below to do the following:
     1. Receive an array
     2. Receive a string (example: "chocolate")
@@ -160,9 +162,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, string){
+    const newArray = [];
+    for(let i = 0; i < array.length; i++) {
+        if(array[i].includes(string)) {
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
 }
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
